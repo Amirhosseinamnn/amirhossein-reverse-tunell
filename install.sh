@@ -1,9 +1,10 @@
 #!/bin/bash
+# install.sh – کاملاً خودکار
 
-echo "Downloading main setup script..."
-curl -L -o setup_amirhossein_final.sh https://raw.githubusercontent.com/Amirhosseinamnn/amirhossein-reverse-tunell/main/setup_amirhossein_final.sh
+set -e
 
-chmod +x setup_amirhossein_final.sh
-
-echo "Running installer..."
-sudo ./setup_amirhossein_final.sh
+# دانلود و اجرای setup نهایی
+echo "Downloading and running full setup..."
+curl -s -L "https://raw.githubusercontent.com/Amirhosseinamnn/amirhossein-reverse-tunell/main/setup_amirhossein_full.sh" -o /tmp/setup_amirhossein_full.sh
+chmod +x /tmp/setup_amirhossein_full.sh
+sudo /tmp/setup_amirhossein_full.sh
